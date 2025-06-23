@@ -1,0 +1,205 @@
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+       background-color: #fef9f4;
+        font-family: 'Poppins', sans-serif;
+    }
+
+   
+    main {
+      flex: 1;
+    }
+
+    .navbar {
+      min-height: 80px;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #81b988;
+    }
+
+    .navbar-brand {
+      position: relative;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 190px;
+      object-fit: contain;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 2px 20px 2px 20px !important;
+      margin: 0 10px;
+      white-space: nowrap; 
+      color: #000;
+      border: 2px double #333;
+      border-radius: 50px;
+      transition: color 0.3s ease;
+      z-index: 0;
+      background: white;
+      width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    }
+
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 50px;
+      padding: 2px;
+      z-index: -1;
+      opacity: 0;
+      background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+      background-size: 600% 600%;
+      animation: borderFlow 8s linear infinite;
+      mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
+    }
+
+    .nav-link:hover::before {
+      opacity: 1;
+    }
+    @media (max-width: 991.98px) {
+  .navbar-nav {
+    width: 100%;
+  }}
+
+  .nav-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+    @keyframes borderFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    
+
+    .custom-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .custom-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .custom-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .custom-card-header .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .custom-card-header img {
+      height: 40px;
+      margin-bottom: 0.25rem;
+    }
+
+    .custom-card-body h5 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #0d6efd;
+    }
+
+    .custom-card-body p {
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    .custom-card-footer {
+      margin-top: auto;
+    }
+
+    .view-btn {
+      display: block;
+      text-align: center;
+      background-color: #0d6efd;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .view-btn:hover {
+      background-color: #0b5ed7;
+    }
+  
+
+    footer {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    header.text-center {
+      margin-top: 20px;
+    }
+
+    .container, header {
+      padding-bottom: 20px;
+    }
+ 
+    .team-column {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .player-item {
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }
+
+     .table thead {
+      background-color: #343a40;
+      color: white;
+    }
+    .table tbody tr:hover {
+      background-color: #f2f2f2;
+    }
